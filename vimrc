@@ -50,3 +50,5 @@ au BufRead,BufNewFile Gemfile set filetype=ruby
 " Colors
 colorscheme xoria256m
 set background=dark
+
+set guioptions-=T
