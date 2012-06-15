@@ -42,6 +42,13 @@ nnoremap <f1> :BufExplorer<cr>
 nnoremap <f2> :NERDTreeToggle<cr>
 nnoremap <f3> :TagbarToggle<cr>
 
+" make <c-L> clear the highlight as well as redraw
+nnoremap <C-L> :nohls<cr><C-L>
+inoremap <C-L> <C-O>:nohls<cr>
+
+" map Q to something useful
+noremap Q gq
+
 " associate *.sbt with scala filetype
 au BufRead,BufNewFile *.sbt set filetype=scala
 au BufRead,BufNewFile Vagrantfile set filetype=ruby
