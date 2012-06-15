@@ -12,4 +12,4 @@ This is my ~/.vim dir.
 * For Command-T `cd ~/vim/bundle/command-t/ruby/command-t && ruby extconf.rb && make`
 * For loading the plugins the Pathogen plugin is used
 
-[Scroolooses vim files](https://github.com/scrooloose) are used as inspiration.
+[Scroolooses vim files](https://github.com/scrooloose/vimfiles) are used as inspiration.
