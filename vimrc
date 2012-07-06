@@ -36,6 +36,7 @@ nmap <silent> ,p :set invpaste<CR>:set paste?<CR>
 
 " reload vimrc
 nmap <silent> ,s :source $MYVIMRC<CR>
+nmap <silent> ,e :e $MYVIMRC<CR>
 
 nmap <silent> ,rd :NERDTree develop<CR>
 nmap <silent> ,rr :NERDTree<CR>
