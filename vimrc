@@ -10,13 +10,10 @@ syntax on   " Syntax highlighting on
 set list
 set listchars=tab:»·,trail:·,nbsp:·
 
-set showmatch        " Show matching brackets
 set showcmd          " Displays incomplete commands
-set incsearch        " Incremental search
 set autoindent       " Indents new line as previous line
 set showmode         " show editing mode on the last line
-set hlsearch         " highlight matching search strings
-set number           " line numbers
+set relativenumber   " relative line numbers
 set cpoptions+=$     " Show $ when replacing
 set wildmenu         " auto completion menu
 set ruler            " display cursor position
@@ -28,6 +25,12 @@ set softtabstop=4    "
 set expandtab        " Insert spaces for tab
 set t_Co=256         " tell the term has 256 colors
 set formatoptions-=o " Don't contiue comments when pushing o/O
+set encoding=utf-8
+set showmatch        " Show matching brackets
+set incsearch        " Incremental search
+set hlsearch         " highlight matching search strings
+set ignorecase
+set smartcase
 
 let mapleader=","
 
@@ -50,6 +53,9 @@ nnoremap <f3> :TagbarToggle<cr>
 nnoremap <C-L> :nohls<cr><C-L>
 inoremap <C-L> <C-O>:nohls<cr>
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee % > /dev/null
+
 " map Q to something useful
 noremap Q gq
 
@@ -59,7 +65,8 @@ au BufRead,BufNewFile Vagrantfile set filetype=ruby
 au BufRead,BufNewFile Gemfile set filetype=ruby
 
 " Colors
-colorscheme xoria256m
+"colorscheme xoria256m
+colorscheme wombat
 set background=dark
 
 set guioptions-=T

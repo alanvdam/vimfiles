@@ -14,7 +14,9 @@ This is my ~/.vim dir.
 
 # References
  * [Scroolooses vim files](https://github.com/scrooloose/vimfiles) are used as inspiration.
+ * [Nice blog post](http://stevelosh.com/blog/2010/09/coming-home-to-vim/)
  * [Blog serie about some of the used plugins](http://www.catonmat.net/blog/vim-plugins-surround-vim/)
  * [Vim Tip 2](http://zzapper.co.uk/vimtips.html)
  * [Vim Tips 2](http://www.cs.swarthmore.edu/help/vim/)
  * [Vim casts](http://vimcasts.org/)
+ * [Reddit](http://www.reddit.com/r/vim/)
