@@ -1,3 +1,3 @@
 #!/bin/bash
 
-git submodule init && git submodule update && ln -s vimrc ~/.vimrc
+git submodule init && git submodule update && ln -s ~/.vim/vimrc ~/.vimrc
