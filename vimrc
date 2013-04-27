@@ -65,8 +65,10 @@ au BufRead,BufNewFile Vagrantfile set filetype=ruby
 au BufRead,BufNewFile Gemfile set filetype=ruby
 
 " Colors
-"colorscheme xoria256m
-colorscheme wombat
+let g:solarized_termcolors=256
 set background=dark
+colorscheme solarized
+"colorscheme wombat
+"colorscheme xoria256m
 
 set guioptions-=T
