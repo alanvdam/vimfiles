@@ -13,7 +13,8 @@ set listchars=tab:»·,trail:·,nbsp:·
 set showcmd          " Displays incomplete commands
 set autoindent       " Indents new line as previous line
 set showmode         " show editing mode on the last line
-set relativenumber   " relative line numbers
+"set relativenumber   " relative line numbers
+set number
 set cpoptions+=$     " Show $ when replacing
 set wildmenu         " auto completion menu
 set ruler            " display cursor position
@@ -31,6 +32,18 @@ set incsearch        " Incremental search
 set hlsearch         " highlight matching search strings
 set ignorecase
 set smartcase
+set visualbell       " Don't beep
+set noerrorbells     " Don't beep
+
+set laststatus=2
+if has('statusline')
+    set statusline=%<%f\                                   " Filename
+    set statusline+=%w%h%m%r                               " Options
+    set statusline+=%{fugitive#statusline()}               " Git Hotness
+    set statusline+=\ [%Y]                                 " filetype
+    set statusline+=\ [%{getcwd()}]                        " current dir
+    set statusline+=%=%-14.(line\ %l\ of\ %L\ -\ col\ %c%) " Right aligned file nav info
+endif
 
 let mapleader=","
 
