@@ -11,3 +11,6 @@ cd bundle/command-t && rake make
 
 # ctags is needed by tagbar
 brew install ctags
+
+# ack is needed by Ack
+brew install ack
