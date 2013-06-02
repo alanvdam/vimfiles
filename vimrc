@@ -13,8 +13,7 @@ set listchars=tab:»·,trail:·,nbsp:·
 set showcmd          " Displays incomplete commands
 set autoindent       " Indents new line as previous line
 set showmode         " show editing mode on the last line
-"set relativenumber   " relative line numbers
-set number
+set number           " show line numbers
 set cpoptions+=$     " Show $ when replacing
 set wildmenu         " auto completion menu
 set ruler            " display cursor position
@@ -54,13 +53,12 @@ nmap <silent> ,p :set invpaste<CR>:set paste?<CR>
 nmap <silent> ,s :source $MYVIMRC<CR>
 nmap <silent> ,e :e $MYVIMRC<CR>
 
-nmap <silent> ,rd :NERDTree develop<CR>
-nmap <silent> ,rr :NERDTree<CR>
-nmap <silent> ,rf :NERDTreeFind<CR>
+nmap <silent> ,f :NERDTreeFind<CR>
 
 nnoremap <f1> :BufExplorer<cr>
 nnoremap <f2> :NERDTreeToggle<cr>
-nnoremap <f3> :TagbarToggle<cr>
+nnoremap <f3> :BufExplorerHorizontalSplit<cr>
+nnoremap <f4> :TagbarToggle<cr>
 
 " make <c-L> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<cr><C-L>
@@ -81,7 +79,19 @@ au BufRead,BufNewFile Gemfile set filetype=ruby
 let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
-"colorscheme wombat
-"colorscheme xoria256m
 
 set guioptions-=T
+
+autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+
+" Close all open buffers on entering a window if the only
+" buffer that's left is the NERDTree buffer
+function! s:CloseIfOnlyNerdTreeLeft()
+  if exists("t:NERDTreeBufName")
+    if bufwinnr(t:NERDTreeBufName) != -1
+      if winnr("$") == 1
+        q
+      endif
+    endif
+  endif
+endfunction
