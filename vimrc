@@ -1,15 +1,47 @@
 call pathogen#infect()
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'wincent/Command-T'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'gregsexton/MatchTag'
+Bundle 'vim-scripts/bufexplorer.zip'
+Bundle 'vim-scripts/matchit.zip'
+Bundle 'vim-scripts/delimitMate.vim'
+Bundle 'vim-scripts/IndexedSearch'
+Bundle 'vim-scripts/YankRing.vim'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-ragtag'
+Bundle 'mileszs/ack.vim'
+Bundle 'greyblake/vim-preview'
+Bundle 'derekwyatt/vim-scala'
+Bundle 'godlygeek/csapprox'
+Bundle 'majutsushi/tagbar'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'groenewege/vim-less'
+Bundle 'SirVer/ultisnips'
+
 filetype on
 filetype plugin on
 filetype indent on
-
 syntax on   " Syntax highlighting on
 
 " Display tabs and trailing spaces
 set list
 set listchars=tab:»·,trail:·,nbsp:·
 
+set nocompatible     " No vi anymore
 set showcmd          " Displays incomplete commands
 set autoindent       " Indents new line as previous line
 set showmode         " show editing mode on the last line
