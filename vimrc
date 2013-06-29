@@ -1,18 +1,12 @@
-call pathogen#infect()
+set nocompatible     " No vi anymore
+filetype off
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" let Vundle manage Vundle
 Bundle 'gmarik/vundle'
-
-Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'wincent/Command-T'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'gregsexton/MatchTag'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'vim-scripts/delimitMate.vim'
@@ -23,6 +17,10 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-ragtag'
+Bundle 'wincent/Command-T'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'gregsexton/MatchTag'
 Bundle 'mileszs/ack.vim'
 Bundle 'greyblake/vim-preview'
 Bundle 'derekwyatt/vim-scala'
@@ -31,17 +29,15 @@ Bundle 'majutsushi/tagbar'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'groenewege/vim-less'
 Bundle 'SirVer/ultisnips'
+Bundle 'christoomey/vim-tmux-navigator'
 
-filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 syntax on   " Syntax highlighting on
 
 " Display tabs and trailing spaces
 set list
 set listchars=tab:»·,trail:·,nbsp:·
 
-set nocompatible     " No vi anymore
 set showcmd          " Displays incomplete commands
 set autoindent       " Indents new line as previous line
 set showmode         " show editing mode on the last line
@@ -65,6 +61,7 @@ set ignorecase
 set smartcase
 set visualbell       " Don't beep
 set noerrorbells     " Don't beep
+set autochdir
 
 set laststatus=2
 if has('statusline')
@@ -77,6 +74,7 @@ if has('statusline')
 endif
 
 let mapleader=","
+let g:yankring_history_dir = '$HOME/.vim'
 
 " toggle paste mode
 nmap <silent> ,p :set invpaste<CR>:set paste?<CR>
@@ -91,6 +89,7 @@ nnoremap <f1> :BufExplorer<cr>
 nnoremap <f2> :NERDTreeToggle<cr>
 nnoremap <f3> :BufExplorerHorizontalSplit<cr>
 nnoremap <f4> :TagbarToggle<cr>
+nnoremap <silent> <f5> :YRShow<cr>
 
 " make <c-L> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<cr><C-L>
