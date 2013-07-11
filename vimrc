@@ -61,7 +61,6 @@ set ignorecase
 set smartcase
 set visualbell       " Don't beep
 set noerrorbells     " Don't beep
-set autochdir
 set splitbelow       " Opens new split below
 set splitright       " Opens new vsplit right"
 
