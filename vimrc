@@ -30,6 +30,8 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'groenewege/vim-less'
 Bundle 'SirVer/ultisnips'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 
 filetype plugin indent on
 syntax on   " Syntax highlighting on
