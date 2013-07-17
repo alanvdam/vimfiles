@@ -49,9 +49,9 @@ set wildmenu         " auto completion menu
 set ruler            " display cursor position
 set autoread         " Automatically read file that changed on disk
 set hidden           " Switch between buffers without saving
-set tabstop=4        " Number of spaces for a tab
-set shiftwidth=4     " Number of spaces for (auto)indent
-set softtabstop=4    "
+set tabstop=2        " Number of spaces for a tab
+set shiftwidth=2     " Number of spaces for (auto)indent
+set softtabstop=2    "
 set expandtab        " Insert spaces for tab
 set t_Co=256         " tell the term has 256 colors
 set formatoptions-=o " Don't contiue comments when pushing o/O
