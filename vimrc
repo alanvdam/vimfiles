@@ -80,19 +80,19 @@ let mapleader=","
 let g:yankring_history_dir = '$HOME/.vim'
 
 " toggle paste mode
-nmap <silent> ,p :set invpaste<CR>:set paste?<CR>
+nnoremap <leader>p :set invpaste<CR>:set paste?<CR>
 
 " reload vimrc
-nmap <silent> ,s :source $MYVIMRC<CR>
-nmap <silent> ,e :e $MYVIMRC<CR>
+nnoremap <leader>s :source $MYVIMRC<CR>
+nnoremap <leader>e :e $MYVIMRC<CR>
 
-nmap <silent> ,f :NERDTreeFind<CR>
+nnoremap <silent> <leader>f :NERDTreeFind<CR>
 
 nnoremap <f1> :BufExplorer<cr>
 nnoremap <f2> :NERDTreeToggle<cr>
 nnoremap <f3> :BufExplorerHorizontalSplit<cr>
 nnoremap <f4> :TagbarToggle<cr>
-nnoremap <silent> <f5> :YRShow<cr>
+nnoremap <f5> :YRShow<cr>
 
 " make <c-L> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<cr><C-L>
