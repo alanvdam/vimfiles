@@ -95,8 +95,8 @@ nnoremap <f4> :TagbarToggle<cr>
 nnoremap <f5> :YRShow<cr>
 
 " make <c-L> clear the highlight as well as redraw
-nnoremap <C-L> :nohls<cr><C-L>
-inoremap <C-L> <C-O>:nohls<cr>
+nnoremap <C-S> :nohls<cr>
+inoremap <C-S> <C-O>:nohls<cr>
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee % > /dev/null
