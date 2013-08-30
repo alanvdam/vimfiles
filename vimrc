@@ -32,6 +32,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+Bundle 'bling/vim-airline'
 
 filetype plugin indent on
 syntax on   " Syntax highlighting on
@@ -65,16 +66,6 @@ set visualbell       " Don't beep
 set noerrorbells     " Don't beep
 set splitbelow       " Opens new split below
 set splitright       " Opens new vsplit right"
-
-set laststatus=2
-if has('statusline')
-    set statusline=%<%f\                                   " Filename
-    set statusline+=%w%h%m%r                               " Options
-    set statusline+=%{fugitive#statusline()}               " Git Hotness
-    set statusline+=\ [%Y]                                 " filetype
-    set statusline+=\ [%{getcwd()}]                        " current dir
-    set statusline+=%=%-14.(line\ %l\ of\ %L\ -\ col\ %c%) " Right aligned file nav info
-endif
 
 let mapleader=","
 let g:yankring_history_dir = '$HOME/.vim'
@@ -113,6 +104,9 @@ au BufRead,BufNewFile Gemfile set filetype=ruby
 let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
+
+set laststatus=2
+let g:airline_powerline_fonts=1
 
 set guioptions-=T
 
