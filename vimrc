@@ -27,12 +27,12 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
+Bundle 'majutsushi/tagbar'
 
 "Bundle 'airblade/vim-gitgutter'
 "Bundle 'tpope/vim-fugitive'
 "Bundle 'vim-scripts/YankRing.vim'
 "Bundle 'godlygeek/csapprox'
-"Bundle 'majutsushi/tagbar'
 "Bundle 'vim-ruby/vim-ruby'
 "Bundle 'groenewege/vim-less'
 "Bundle 'SirVer/ultisnips'
@@ -82,10 +82,13 @@ nnoremap <leader>e :e $MYVIMRC<CR>
 
 nnoremap <leader>xf :% !xmllint --format -<CR>
 
+" remove trailing spaces
+nnoremap <leader>rs :%s/\s\+$<CR>
+
 nnoremap <silent> <leader>f :NERDTreeFind<CR>
 
-nnoremap <f1> :BufExplorer<cr>
-nnoremap <f2> :NERDTreeToggle<cr>
+nnoremap <f1> :NERDTreeToggle<cr>
+nnoremap <f2> :BufExplorer<cr>
 nnoremap <f3> :BufExplorerHorizontalSplit<cr>
 nnoremap <f4> :TagbarToggle<cr>
 nnoremap <f5> :YRShow<cr>
