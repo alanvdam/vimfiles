@@ -1,41 +1,43 @@
-set nocompatible     " No vi anymore
+set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'vim-scripts/bufexplorer.zip'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'Raimondi/delimitMate'
-Bundle 'vim-scripts/IndexedSearch'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-sensible'
-Bundle 'wincent/Command-T'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'gregsexton/MatchTag'
-Bundle 'mileszs/ack.vim'
-Bundle 'greyblake/vim-preview'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
-Bundle 'bling/vim-airline'
-Bundle 'ervandew/supertab'
-Bundle 'majutsushi/tagbar'
+Plugin 'gmarik/vundle'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-scripts/bufexplorer.zip'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'Raimondi/delimitMate'
+Plugin 'vim-scripts/IndexedSearch'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-ragtag'
+Plugin 'tpope/vim-sensible'
+Plugin 'wincent/Command-T'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'gregsexton/MatchTag'
+Plugin 'mileszs/ack.vim'
+Plugin 'greyblake/vim-preview'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
+Plugin 'bling/vim-airline'
+Plugin 'ervandew/supertab'
+Plugin 'majutsushi/tagbar'
 
-"Bundle 'airblade/vim-gitgutter'
-"Bundle 'tpope/vim-fugitive'
-"Bundle 'vim-scripts/YankRing.vim'
-"Bundle 'godlygeek/csapprox'
-"Bundle 'vim-ruby/vim-ruby'
-"Bundle 'groenewege/vim-less'
-"Bundle 'SirVer/ultisnips'
+"Plugin 'airblade/vim-gitgutter'
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'vim-scripts/YankRing.vim'
+"Plugin 'godlygeek/csapprox'
+"Plugin 'vim-ruby/vim-ruby'
+"Plugin 'groenewege/vim-less'
+"Plugin 'SirVer/ultisnips'
+
+call vundle#end()
 
 filetype plugin indent on
 syntax on   " Syntax highlighting on
