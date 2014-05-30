@@ -1,3 +1,4 @@
+set encoding=utf-8
 
 source ~/.vim/plugins.vim
 
@@ -17,7 +18,6 @@ set softtabstop=2    "
 set expandtab        " Insert spaces for tab
 set t_Co=256         " tell the term has 256 colors
 set formatoptions-=o " Don't contiue comments when pushing o/O
-set encoding=utf-8
 set incsearch        " Incremental search
 set hlsearch         " highlight matching search strings
 set ignorecase
