@@ -38,6 +38,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'mxw/vim-jsx'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'rking/ag.vim'
+Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
 
