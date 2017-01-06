@@ -70,6 +70,9 @@ au BufRead,BufNewFile Vagrantfile set filetype=ruby
 au BufRead,BufNewFile Gemfile set filetype=ruby
 au BufNewFile,BufRead *.gradle set filetype=groovy
 
+au BufReadPost Jenkinsfile set syntax=groovy
+au BufReadPost Jenkinsfile set filetype=groovy
+
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 
 if executable('ag')
